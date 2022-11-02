@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import ServiceCard from '../../components/ServiceCard';
+import serviceData from '../../data/service.data';
 
 const Services = () => {
 	return (
@@ -15,78 +17,9 @@ const Services = () => {
 				<div className='row'>
 					<div className='col-md-12'>
 						<div className='service-slider'>
-							<div className='service-block yellow'>
-								<img src='images/service-icon1.png' alt='#' />
-								<h3>Dental Care</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-									do eius mod tempor incididunt ut labore{' '}
-								</p>
-								<a href='#' className='btn btn-dark'>
-									READ MORE
-								</a>
-								<div className='service-bg-icon'>
-									<img
-										src='images/services-bg1.png'
-										className='img-fluid'
-										alt='#'
-									/>
-								</div>
-							</div>
-							<div className='service-block green'>
-								<img src='images/service-icon2.png' alt='#' />
-								<h3>Eye Care</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-									do eius mod tempor incididunt ut labore
-								</p>
-								<a href='#' className='btn btn-dark'>
-									READ MORE
-								</a>
-								<div className='service-bg-icon'>
-									<img
-										src='images/services-bg2.png'
-										className='img-fluid'
-										alt='#'
-									/>
-								</div>
-							</div>
-							<div className='service-block blue'>
-								<img src='images/service-icon3.png' alt='#' />
-								<h3>Allergic Issue</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-									do eius mod tempor incididunt ut labore
-								</p>
-								<a href='#' className='btn btn-dark'>
-									READ MORE
-								</a>
-								<div className='service-bg-icon'>
-									<img
-										src='images/services-bg3.png'
-										className='img-fluid'
-										alt='#'
-									/>
-								</div>
-							</div>
-							<div className='service-block green'>
-								<img src='images/service-icon3.png' alt='#' />
-								<h3>Allergic Issue</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-									do eius mod tempor incididunt ut labore
-								</p>
-								<a href='#' className='btn btn-dark'>
-									READ MORE
-								</a>
-								<div className='service-bg-icon'>
-									<img
-										src='images/services-bg4.png'
-										className='img-fluid'
-										alt='#'
-									/>
-								</div>
-							</div>
+							{serviceData.map((item, index) => (
+								<ServiceCard item={item} key={index} />
+							))}
 						</div>
 					</div>
 				</div>
@@ -100,7 +33,7 @@ const Services = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default Services
+export default Services;

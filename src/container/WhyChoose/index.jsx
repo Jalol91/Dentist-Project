@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WhyChoose = () => {
 	return (
@@ -55,9 +56,9 @@ const WhyChoose = () => {
 						<hr />
 						<div className='row'>
 							<div className='col-md-12'>
-								<a href='#' className='btn btn-dark' tabIndex={0}>
+								<Link to='/appointment' className='btn btn-dark' tabIndex={0}>
 									MAKE APPOINTMENT
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -95,7 +96,7 @@ const WhyChoose = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default WhyChoose
+export default WhyChoose;

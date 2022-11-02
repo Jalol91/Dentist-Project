@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import testimonialsData from '../../data/testimonials.data';
 
 const Testimonials = () => {
 	return (
@@ -10,163 +11,46 @@ const Testimonials = () => {
 						<h2>What Our Clients Say</h2>
 					</div>
 					<div className='testi-slider'>
-						<div className='testimonial-wrap'>
-							<img
-								src='images/testi-img1.jpg'
-								className='img-fluid testi-img-icon'
-								alt='#'
-							/>
-							<ul>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-							</ul>
-							<p>
-								<span>L</span>orem ipsum dolor sit amet, consectetur adipisicing
-								elit, sed do eius mod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation.
-							</p>
-							<span className='testi-name'>Mary Jane (ceo)</span>
-							<div className='testi-styled-bg'>
+						{testimonialsData.map((item, index) => (
+							<div key={index} className='testimonial-wrap'>
 								<img
-									src='images/testi-side-img_05.png'
-									className='img-fluid'
+									src={item.image}
+									className='img-fluid testi-img-icon'
 									alt='#'
 								/>
+								<ul>
+									<li>
+										<i className='fas fa-star' />
+									</li>
+									<li>
+										<i className='fas fa-star' />
+									</li>
+									<li>
+										<i className='fas fa-star' />
+									</li>
+									<li>
+										<i className='fas fa-star' />
+									</li>
+									<li>
+										<i className='fas fa-star' />
+									</li>
+								</ul>
+								<p>{item.text}</p>
+								<span className='testi-name'>{item.name}</span>
+								<div className='testi-styled-bg'>
+									<img
+										src='images/testi-side-img_05.png'
+										className='img-fluid'
+										alt='#'
+									/>
+								</div>
 							</div>
-						</div>
-						<div className='testimonial-wrap quaternary-br-color'>
-							<img
-								src='images/testi-img2.jpg'
-								className='img-fluid testi-img-icon'
-								alt='#'
-							/>
-							<ul>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-							</ul>
-							<p>
-								<span>L</span>orem ipsum dolor sit amet, consectetur adipisicing
-								elit, sed do eius mod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation.
-							</p>
-							<span className='testi-name'>Mary Jane (ceo)</span>
-							<div className='testi-styled-bg'>
-								<img
-									src='images/testi-side-img_05.png'
-									className='img-fluid'
-									alt='#'
-								/>
-							</div>
-						</div>
-						<div className='testimonial-wrap'>
-							<img
-								src='images/testi-img1.jpg'
-								className='img-fluid testi-img-icon'
-								alt='#'
-							/>
-							<ul>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-							</ul>
-							<p>
-								<span>L</span>orem ipsum dolor sit amet, consectetur adipisicing
-								elit, sed do eius mod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation.
-							</p>
-							<span className='testi-name'>Mary Jane (ceo)</span>
-							<div className='testi-styled-bg'>
-								<img
-									src='images/testi-side-img_05.png'
-									className='img-fluid'
-									alt='#'
-								/>
-							</div>
-						</div>
-						<div className='testimonial-wrap quaternary-br-color'>
-							<img
-								src='images/testi-img2.jpg'
-								className='img-fluid testi-img-icon'
-								alt='#'
-							/>
-							<ul>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-								<li>
-									<i className='fas fa-star' />
-								</li>
-							</ul>
-							<p>
-								<span>L</span>orem ipsum dolor sit amet, consectetur adipisicing
-								elit, sed do eius mod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation.
-							</p>
-							<span className='testi-name'>Mary Jane (ceo)</span>
-							<div className='testi-styled-bg'>
-								<img
-									src='images/testi-side-img_05.png'
-									className='img-fluid'
-									alt='#'
-								/>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default Testimonials
+export default Testimonials;

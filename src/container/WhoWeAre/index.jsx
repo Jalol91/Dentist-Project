@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ reverse }) => {
 	return (
 		<section className='space'>
 			<div className='container container-custom'>
-				<div className='row'>
-					<div className='col-md-12 col-lg-6'>
+				<div className='row '>
+					<div className={`col-md-12 col-lg-6 ${reverse && 'order-2'}`}>
 						<div className='news-img-block'>
 							<img
 								src='images/play-img.png'
@@ -14,7 +14,8 @@ const WhoWeAre = () => {
 							/>
 							<a
 								className='video-play-button popup-youtube'
-								href='https://www.youtube.com/watch?v=pBFQdxA-apI'>
+								href='https://www.youtube.com/watch?v=pBFQdxA-apI'
+							>
 								<span />
 							</a>
 							<div id='video-overlay' className='video-overlay'>
@@ -55,7 +56,7 @@ const WhoWeAre = () => {
 				</div>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default WhoWeAre
+export default WhoWeAre;
